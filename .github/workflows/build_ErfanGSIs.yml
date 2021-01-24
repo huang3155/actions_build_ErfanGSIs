@@ -14,8 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: http://download.h2os.com/5T/MP/OnePlus5THydrogen_43_OTA_064_all_2009080056_338a836209c54a7e.zip
-  ROM_NAME: OxygenOS
+  ROM_URL: https://coloroswebsitefs.coloros.com/coloroswebsite-coloros-com/grs_20210116104219/PDKM00_11_OTA_0210_all_x6Y2QVoyMrXV.ozip
+
+  ROM_NAME: ColorOS
   TZ: Asia/Shanghai
 
 jobs:
@@ -51,7 +52,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh -ab $ROM_URL $ROM_NAME
        
        - name: Zip GSI  
          run: |
@@ -61,7 +62,7 @@ jobs:
        - name: Upload GSI to BitSend
          run: |
               curl -sL https://git.io/file-transfer | sh
-              ./transfer bit final/GSI.zip
+              ./transfer wet final/GSI.zip
 
          
             
