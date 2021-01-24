@@ -52,7 +52,7 @@ jobs:
               sudo bash setup.sh
        
        - name: MAKE GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh -ab $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME --ab
        
        - name: 7z GSI  
          run: |
