@@ -14,9 +14,9 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://www.wenshushu.cn/f/4jz5pe7ce18
+  ROM_URL: https://bigota.d.miui.com/V12.0.6.0.QJECNXM/miui_CANNON_V12.0.6.0.QJECNXM_1e4df76006_10.0.zip
 
-ROM_NAME: ColorOS
+ROM_NAME: MIUI
   TZ:
 jobs:
   build:
